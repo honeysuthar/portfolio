@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Honey Suthar | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+  <!-- Navbar -->
   <header>
-    <nav>
-      <h1>Honey Suthar</h1>
-      <ul>
+    <nav class="navbar">
+      <div class="logo">Honey Suthar</div>
+      <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -19,55 +21,66 @@
       </ul>
     </nav>
   </header>
-<section id="about">
-  <h2>About Me</h2>
-  <p>
-    I’m Honey Suthar — an adaptable and curious learner who thrives in creative, collaborative environments. With a background in web development and a growing interest in design, communication, and problem-solving, I enjoy exploring the intersection of technology and human experience.
-  </p>
-  <p>
-    Whether I’m coding a small project, organizing ideas, or learning a new tool, I approach every challenge with focus, patience, and the willingness to grow. I value clarity, empathy, and meaningful work — and I’m always ready to contribute, learn, and evolve.
-  </p>
-  <p>
-    I'm currently seeking internship opportunities where I can build real-world skills, support a team, and continue discovering what I love to do.
-  </p>
-</section>
 
-  <section id="skills">
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Hello, I'm <span>Honey Suthar</span></h1>
+    <p>Frontend Developer | Building clean and modern web experiences</p>
+    <a href="#" class="btn">Download Resume</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+      I’m Honey Suthar — an adaptable and curious learner who thrives in creative, collaborative environments.
+      With a background in web development and a growing interest in design, communication, and problem-solving,
+      I enjoy exploring the intersection of technology and human experience.
+    </p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
     <h2>Skills</h2>
-    <ul class="skills-list">
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>Bootstrap</li>
-      <li>Git & GitHub</li>
-    </ul>
+    <div class="skills-container">
+      <span class="skill">HTML</span>
+      <span class="skill">CSS</span>
+      <span class="skill">JavaScript</span>
+      <span class="skill">Bootstrap</span>
+      <span class="skill">Git & GitHub</span>
+    </div>
   </section>
-  <section id="projects">
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
     <h2>Projects</h2>
-    <div class="project-card">
-      <h3>Calculator</h3>
-      <p>A simple JavaScript app that does basic arithmetic functions.</p>
-      <a href="https://honeysuthar.github.io/iphonecalc/" target="_blank">View Project</a>
-    </div>
-    <div class="project-card">
-      <h3>Birthday Wish</h3>
-      <p>A simple birthday wishing page</p>
-      <a href="https://honeysuthar.github.io/hbd-wish/" target="_blank">View Project</a>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Calculator</h3>
+        <p>A simple JavaScript app that does basic arithmetic functions.</p>
+        <a href="https://honeysuthar.github.io/iphonecalc/" target="_blank" class="btn">View Project</a>
+      </div>
+      <div class="project-card">
+        <h3>Birthday Wish</h3>
+        <p>A simple birthday wishing page with fun design.</p>
+        <a href="https://honeysuthar.github.io/hbd-wish/" target="_blank" class="btn">View Project</a>
+      </div>
     </div>
   </section>
-  <section id="contact">
-  <h2>Contact</h2>
-  <p>Email: honeysuthar0805@gmail.com</p>
-  <p>
-    <i class="fab fa-linkedin"></i>
-    <a href="https://www.linkedin.com/in/Honey-Suthar" target="_blank" rel="noopener noreferrer">Honey-Suthar</a><br>
-    <i class="fab fa-github"></i>
-    <a href="https://github.com/honeysuthar" target="_blank" rel="noopener noreferrer">honeysuthar</a>
-  </p>
-</section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:honeysuthar0805@gmail.com">honeysuthar0805@gmail.com</a></p>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/Honey-Suthar" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/honeysuthar" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>Made with 💖 by Honey Suthar</p>
+    <p>Made with ❤️ by Honey Suthar</p>
   </footer>
-  <script src="script.js"></script>
 </body>
 </html>
