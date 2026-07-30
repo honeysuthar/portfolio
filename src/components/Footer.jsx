@@ -24,11 +24,11 @@ const Footer = () => {
         <div className="footer-contact">
           <div className="contact-item">
             <Mail size={18} className="contact-icon" />
-            <span>honeysuthar0805@gmail.com</span>
+            <span><a href="mailto:honeysuthar0805@gmail.com">honeysuthar0805@gmail.com</a></span>
           </div>
           <div className="contact-item">
             <AtSign size={18} className="contact-icon" />
-            <span>GitHub / LinkedIn</span>
+            <span><a href="https://github.com/honeysuthar" target="_blank" rel="noopener noreferrer">GitHub</a> / <a href="https://www.linkedin.com/in/honey-suthar/" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
           </div>
           <div className="contact-item">
             <MapPin size={18} className="contact-icon" />
