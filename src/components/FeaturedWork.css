@@ -38,7 +38,8 @@
   border-radius: 4px;
 }
 
-.project-card:hover .flip-inner {
+.project-card:hover .flip-inner,
+.project-card.flipped .flip-inner {
   transform: rotateY(180deg);
 }
 
@@ -117,13 +118,19 @@
   letter-spacing: 1px;
 }
 
+@media (max-width: 1200px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 1024px) {
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .projects-grid {
     grid-template-columns: 1fr;
   }

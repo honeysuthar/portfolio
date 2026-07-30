@@ -122,9 +122,24 @@
   .about-content {
     max-width: 100%;
   }
+  .about-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
+  .about {
+    padding-bottom: 60px;
+  }
+  .about-title {
+    font-size: 2.5rem;
+  }
+  .about-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
   .about-cards {
     grid-template-columns: 1fr;
   }

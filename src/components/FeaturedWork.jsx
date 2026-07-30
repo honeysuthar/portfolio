@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './FeaturedWork.css';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
@@ -52,6 +52,20 @@ const projects = [
 
 const FeaturedWork = () => {
   const { ref, isVisible } = useScrollReveal();
+  const [flipped, setFlipped] = useState(null);
+
+  const handleCardClick = (e, id, link) => {
+    // On touch devices, first tap flips, second tap opens link
+    if (window.matchMedia('(hover: none)').matches) {
+      if (flipped === id) {
+        window.open(link, '_blank', 'noopener,noreferrer');
+        setFlipped(null);
+      } else {
+        e.preventDefault();
+        setFlipped(id);
+      }
+    }
+  };
 
   return (
     <section ref={ref} className={`featured-work container reveal-hidden ${isVisible ? 'reveal-visible' : ''}`} id="work">
@@ -64,7 +78,15 @@ const FeaturedWork = () => {
       
       <div className="projects-grid">
         {projects.map(project => (
-          <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-card" key={project.id} style={{ textDecoration: 'none' }}>
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`project-card ${flipped === project.id ? 'flipped' : ''}`}
+            key={project.id}
+            style={{ textDecoration: 'none' }}
+            onClick={(e) => handleCardClick(e, project.id, project.link)}
+          >
             <div className="project-image-wrapper">
               <div className="flip-inner">
                 <div className="card-front" style={{ background: project.image }}>

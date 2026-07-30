@@ -9,8 +9,8 @@ const Hero = () => {
     <section ref={ref} className={`hero container reveal-hidden ${isVisible ? 'reveal-visible' : ''}`} id="home">
       <div className="hero-content">
         <h1 className="hero-title">
-          <span className="subtitle">I BUILD</span><br />
-          <span className="title-large">Web Apps</span><br />
+          <span className="subtitle">I BUILD</span>
+          <span className="title-large">Web Apps</span>
           <span className="subtitle-italic">THAT <i>PERFORM.</i></span>
         </h1>
         
