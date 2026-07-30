@@ -1,0 +1,125 @@
+.case-studies {
+  padding-top: clamp(2rem, 4vw, 4rem);
+  padding-bottom: clamp(2rem, 4vw, 4rem);
+}
+
+.studies-grid {
+  display: flex;
+  gap: 2rem;
+}
+
+.study-card {
+  flex: 1;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  min-height: 400px;
+}
+
+.study-bookify {
+  background: linear-gradient(135deg, #1f1424, #130a17);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.study-content.full-width {
+  flex: none;
+  width: 100%;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 2;
+}
+
+.study-badge {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  margin-bottom: 2rem;
+}
+
+.study-title {
+  font-family: var(--font-heading);
+  font-size: 4.5rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+}
+
+.study-tagline {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  max-width: 900px;
+}
+
+.study-desc {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-bottom: 2rem;
+  color: var(--text-secondary);
+}
+
+.study-tags {
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 3rem;
+  letter-spacing: 1.5px;
+}
+
+.study-link.btn-repo {
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.study-link.btn-repo:hover {
+  background-color: var(--text-primary);
+  color: var(--bg-color);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+  .study-title {
+    font-size: 3.5rem;
+  }
+  .study-tagline {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .study-content.full-width {
+    padding: 3rem 2rem;
+  }
+  .study-title {
+    font-size: 2.8rem;
+  }
+  .study-tagline {
+    font-size: 1.3rem;
+  }
+  .study-tags {
+    line-height: 1.8;
+  }
+}

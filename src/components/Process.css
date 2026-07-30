@@ -1,0 +1,69 @@
+.process {
+  padding-top: clamp(2rem, 4vw, 4rem);
+  padding-bottom: clamp(2rem, 4vw, 4rem);
+}
+
+.process-timeline {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.process-step {
+  flex: 1;
+  position: relative;
+  padding-right: 2rem;
+}
+
+.step-num {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.step-title {
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  color: var(--text-primary);
+  margin-bottom: 0.8rem;
+}
+
+.step-desc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.step-connector {
+  position: absolute;
+  top: 1.75rem;
+  right: 0;
+  width: calc(100% - 4rem);
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.step-connector::after {
+  content: '→';
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 1024px) {
+  .process-timeline {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .step-connector {
+    display: none;
+  }
+  .process-step {
+    padding-right: 0;
+  }
+}
